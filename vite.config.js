@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  base: '/isola-verda/', // Passe "isola-verda" an deinen Repo-Namen an!
+  base: '/isola-verde/', // Passe "isola-verde" an deinen Repo-Namen an!
   plugins: [vue()],
   resolve: {
     alias: {
