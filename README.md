@@ -406,3 +406,4 @@ npm run dev -- --port 5174
 ## 📄 Lizenz
 
 MIT License - Frei verwendbar für persönliche und kommerzielle Projekte
+.
