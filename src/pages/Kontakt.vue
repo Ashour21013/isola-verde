@@ -13,7 +13,7 @@
     <!-- Contact Information Section -->
     <section class="section-padding bg-white dark:bg-slate-900">
       <div class="container-custom">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-2xl mx-auto">
           <!-- Address -->
           <div class="card p-8 text-center hover:shadow-lg transition-shadow duration-300">
             <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -24,7 +24,7 @@
             </div>
             <h3 class="text-xl font-semibold mb-2">Adresse</h3>
             <p class="text-slate-600 dark:text-slate-300">
-              Hauptstraße 42<br />80331 München<br />Deutschland
+              {{ restaurantData.address }}
             </p>
           </div>
 
@@ -36,24 +36,10 @@
               </svg>
             </div>
             <h3 class="text-xl font-semibold mb-2">Telefon</h3>
-            <a href="tel:+498912345678" class="text-primary-600 dark:text-primary-400 hover:underline text-lg font-semibold">
-              +49 (0)89 123 456 78
+            <a :href="`tel:${restaurantData.phone}`" class="text-primary-600 dark:text-primary-400 hover:underline text-lg font-semibold">
+              {{ restaurantData.phone }}
             </a>
             <p class="text-slate-600 dark:text-slate-300 text-sm mt-2">Montag - Sonntag, 11:30 - 23:00</p>
-          </div>
-
-          <!-- Email -->
-          <div class="card p-8 text-center hover:shadow-lg transition-shadow duration-300">
-            <div class="w-16 h-16 bg-primary-100 dark:bg-primary-900/30 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-semibold mb-2">E-Mail</h3>
-            <a href="mailto:info@isolaverda.de" class="text-primary-600 dark:text-primary-400 hover:underline font-semibold break-all">
-              info@isolaverda.de
-            </a>
-            <p class="text-slate-600 dark:text-slate-300 text-sm mt-2">Wir antworten innerhalb von 24h</p>
           </div>
         </div>
 
@@ -66,16 +52,24 @@
     </section>
 
     <!-- Opening Hours Extended Section -->
-    <section class="section-padding bg-white dark:bg-slate-900">
+    <section class="section-padding bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900">
       <div class="container-custom">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <!-- Opening Hours -->
           <div>
             <h2 class="text-3xl font-bold mb-8">Öffnungszeiten</h2>
-            <div class="space-y-4">
-              <div v-for="(hours, day) in openingHours" :key="day" class="flex justify-between items-center pb-3 border-b border-slate-200 dark:border-slate-700">
-                <span class="font-semibold text-slate-700 dark:text-slate-200">{{ formatDay(day) }}</span>
-                <span class="text-slate-600 dark:text-slate-300">{{ hours }}</span>
+            <div class="bg-white dark:bg-slate-800 rounded-xl p-8 shadow-lg">
+              <div class="flex items-start gap-6">
+                <div class="flex-shrink-0">
+                  <svg class="w-12 h-12 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <div>
+                  <p class="text-slate-600 dark:text-slate-300 text-sm mb-2">{{ openingHours.note }}</p>
+                  <p class="text-3xl font-bold text-slate-900 dark:text-white mb-1">{{ openingHours.standard }}</p>
+                  <p class="text-slate-500 dark:text-slate-400 text-sm">Montag - Sonntag</p>
+                </div>
               </div>
             </div>
 
@@ -98,7 +92,7 @@
                   Mit dem Auto
                 </h3>
                 <p class="text-slate-600 dark:text-slate-300">
-                  Kostenlose Parkplätze in unmittelbarer Nähe. Die nächsten Parkhäuser sind nur 5 Minuten Fußweg entfernt.
+                  Kostenlose Parkplätze in unmittelbarer Nähe der Silbergasse. Mehrere Parkhäuser sind in der Umgebung verfügbar und zu Fuß schnell erreichbar.
                 </p>
               </div>
 
@@ -110,8 +104,9 @@
                   Öffentliche Verkehrsmittel
                 </h3>
                 <p class="text-slate-600 dark:text-slate-300">
-                  U-Bahn: Linie U2, U7 Station "Marienplatz" (5 Min. Fußweg)<br />
-                  S-Bahn: Alle Linien bis "Marienplatz" (5 Min. Fußweg)
+                  U-Bahn: Linie U6 "Währinger Straße" oder "Nussdorfer Straße"<br />
+                  Straßenbahn: Linie 5 und 33 (Station Silbergasse)<br />
+                  Bus: Mehrere Buslinien in der direkten Umgebung
                 </p>
               </div>
 
@@ -137,26 +132,7 @@
 <script setup>
 import { ref } from 'vue';
 import MapEmbed from '@/components/MapEmbed.vue';
+import restaurantData from '@/data/restaurant.json';
 
-const openingHours = {
-  monday: '11:30 - 14:30, 17:30 - 23:00',
-  tuesday: '11:30 - 14:30, 17:30 - 23:00',
-  wednesday: '11:30 - 14:30, 17:30 - 23:00',
-  thursday: '11:30 - 14:30, 17:30 - 23:00',
-  friday: '11:30 - 14:30, 17:30 - 23:30',
-  saturday: '11:30 - 14:30, 17:30 - 23:30',
-  sunday: '11:30 - 23:00',
-};
-
-const dayNames = {
-  monday: 'Montag',
-  tuesday: 'Dienstag',
-  wednesday: 'Mittwoch',
-  thursday: 'Donnerstag',
-  friday: 'Freitag',
-  saturday: 'Samstag',
-  sunday: 'Sonntag',
-};
-
-const formatDay = (day) => dayNames[day];
+const openingHours = restaurantData.openingHours;
 </script>

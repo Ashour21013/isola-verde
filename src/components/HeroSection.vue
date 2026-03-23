@@ -13,7 +13,7 @@
       </span>
 
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight max-w-4xl mx-auto">
-        Italienische Küche im Herzen der Stadt
+        Authentische italienische Küche in Wien
       </h1>
 
       <p class="text-lg sm:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed">
@@ -34,7 +34,7 @@
         </RouterLink>
 
         <a
-          href="tel:+498912345678"
+          :href="`tel:${restaurantData.phone}`"
           class="btn-secondary group"
           aria-label="Tisch reservieren"
         >
@@ -57,6 +57,7 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+import restaurantData from '@/data/restaurant.json';
 
 const scrollToNext = () => {
   // Scrolle zur nächsten Sektion (About Section)

@@ -1,24 +1,68 @@
 {
   "name": "Isola Verda",
-  "slogan": "Italienische Küche im Herzen der Stadt",
+  "slogan": "Authentische italienische Küche in Wien",
   "description": "Willkommen bei Isola Verda, wo wir traditionelle italienische Küche mit modernem Flair servieren. Seit 2010 begeistern wir unsere Gäste mit authentischen Rezepten, frischen Zutaten und einem unvergesslichen kulinarischen Erlebnis.",
-  "address": "Hauptstraße 42, 80331 München",
-  "phone": "+49 (0)89 123 456 78",
-  "email": "info@isolaverda.de",
-  "website": "www.isolaverda.de",
+  "address": "Silbergasse 24, 1190 Wien",
+  "phone": "01 3688255",
   "openingHours": {
-    "monday": "11:30 - 14:30, 17:30 - 23:00",
-    "tuesday": "11:30 - 14:30, 17:30 - 23:00",
-    "wednesday": "11:30 - 14:30, 17:30 - 23:00",
-    "thursday": "11:30 - 14:30, 17:30 - 23:00",
-    "friday": "11:30 - 14:30, 17:30 - 23:30",
-    "saturday": "11:30 - 14:30, 17:30 - 23:30",
-    "sunday": "11:30 - 23:00"
+    "standard": "11:30 - 14:30, 17:30 - 23:00",
+    "note": "Täglich geöffnet"
   },
-  "googleMapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2661.647491516404!2d11.5747!3d48.1372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479e74e3a3a3a3a3%3A0x3a3a3a3a3a3a3a3a!2sHauptstra%C3%9Fe%2042%2C%2080331%20M%C3%BCnchen!5e0!3m2!1sde!2sde!4v1234567890",
+  "googleMapsEmbed": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2660.384!2d16.3182!3d48.2256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476d06a3a3a3a3a3%3A0x1234567890abcdef!2sSilbergasse%2024%2C%201190%20Wien%2C%20%C3%96sterreich!5e0!3m2!1sde!2sat!4v1709635890123",
   "socialMedia": {
     "instagram": "https://instagram.com/isolaverda",
-    "facebook": "https://facebook.com/isolaverda",
-    "tripadvisor": "https://tripadvisor.com"
+    "facebook": "https://www.facebook.com/p/Pizzeria-Isola-Verde-100067902472863/?locale=de_DE",
+    "tripadvisor": "https://www.tripadvisor.at/Restaurant_Review-g190454-d3723112-Reviews-Isola_Verde-Vienna.html",
+    "mjam": "https://www.foodora.at/restaurant/flt4/isola-verde-flt4",
+    "lieferando": "https://www.lieferando.at/speisekarte/isola-verde-wien",
+    "wolt": "https://wolt.com/de-at/aut/vienna/restaurant/isola-verde?utm_source=googlemapreserved&utm_campaign=isola-verde&utm_content=68c147d6931f71c5b29b5e6d&rwg_token=AFd1xnFZAyck6OEWouioeOIf2tE8Nks1EJYswW215IoGrlyQMRVwRjQeXl9BEbE3VQjElGWnVjd6qfbU21fngTCtI-EybEnAUQ%3D%3D"
+  },
+  "reviews": {
+    "rating": 4.5,
+    "totalReviews": 348,
+    "items": [
+      {
+        "id": 1,
+        "initials": "EF",
+        "name": "Ehsan Forootani",
+        "rating": 5,
+        "text": "Ausgezeichnete Qualität und beeindruckend schnelle Lieferung. Die Pizza kommt immer heiß und frisch an!"
+      },
+      {
+        "id": 2,
+        "initials": "HK",
+        "name": "Hannah Kep",
+        "rating": 5,
+        "text": "Super nette Pizzeria mit herzlichem Personal. Die Pasta war al dente und sehr lecker!"
+      },
+      {
+        "id": 3,
+        "initials": "MC",
+        "name": "Milan Ciric",
+        "rating": 5,
+        "text": "Sehr leckeres Essen, freundliches Personal und top Service. Wir kommen definitiv öfter!"
+      },
+      {
+        "id": 4,
+        "initials": "AK",
+        "name": "Anna Kiiskinen",
+        "rating": 5,
+        "text": "Tolles Essen, Pizza und Rotwein. Nettes Personal und entspannte Atmosphäre. Gerne wieder!"
+      },
+      {
+        "id": 5,
+        "initials": "RK",
+        "name": "Renate K",
+        "rating": 5,
+        "text": "Leckere Pizzeria mit frischem Essen und sehr zuvorkommendem Kellner. Absolut empfehlenswert!"
+      },
+      {
+        "id": 6,
+        "initials": "SF",
+        "name": "Stefan Freund",
+        "rating": 5,
+        "text": "Das Essen ist immer lecker und frisch! Der Besitzer ist phänomenal. Tolles Restaurant!"
+      }
+    ]
   }
 }

@@ -11,7 +11,7 @@
             <h3 class="text-lg font-bold">Isola Verda</h3>
           </div>
           <p class="text-slate-300 text-sm leading-relaxed">
-            Authentische italienische Küche im Herzen der Stadt. Wir servieren traditionelle Rezepte mit modernem Flair.
+            Authentische italienische Küche in Wien. Wir servieren traditionelle Rezepte mit modernem Flair.
           </p>
         </div>
 
@@ -63,22 +63,14 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
-              <span>Hauptstraße 42<br />80331 München</span>
-            </li>
-            <li class="flex items-center gap-3">
-              <svg class="w-5 h-5 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              <a href="mailto:info@isolaverda.de" class="hover:text-primary-400 transition-colors">
-                info@isolaverda.de
-              </a>
+              <span>{{ restaurantData.address }}</span>
             </li>
             <li class="flex items-center gap-3">
               <svg class="w-5 h-5 text-primary-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <a href="tel:+498912345678" class="hover:text-primary-400 transition-colors">
-                +49 (0)89 123 456 78
+              <a :href="`tel:${restaurantData.phone}`" class="hover:text-primary-400 transition-colors">
+                {{ restaurantData.phone }}
               </a>
             </li>
           </ul>
@@ -89,7 +81,7 @@
           <h4 class="text-lg font-semibold mb-4">Folgen Sie uns</h4>
           <div class="flex gap-4">
             <a
-              href="https://instagram.com/isolaverda"
+              :href="restaurantData.socialMedia.instagram"
               target="_blank"
               rel="noopener noreferrer"
               class="w-10 h-10 bg-slate-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -100,7 +92,7 @@
               </svg>
             </a>
             <a
-              href="https://facebook.com/isolaverda"
+              :href="restaurantData.socialMedia.facebook"
               target="_blank"
               rel="noopener noreferrer"
               class="w-10 h-10 bg-slate-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -111,7 +103,7 @@
               </svg>
             </a>
             <a
-              href="https://tripadvisor.com"
+              :href="restaurantData.socialMedia.tripadvisor"
               target="_blank"
               rel="noopener noreferrer"
               class="w-10 h-10 bg-slate-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500"
@@ -120,6 +112,40 @@
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M12 0C5.383 0 0 5.383 0 12s5.383 12 12 12 12-5.383 12-12S18.617 0 12 0zm0 20.571c-4.723 0-8.571-3.848-8.571-8.571S7.277 3.429 12 3.429s8.571 3.848 8.571 8.571-3.848 8.571-8.571 8.571z" />
               </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Delivery Platforms -->
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Bestellen Sie jetzt</h4>
+          <div class="flex gap-4">
+            <a
+              :href="restaurantData.socialMedia.mjam"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-10 h-10 bg-slate-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500"
+              aria-label="mjam"
+            >
+              <span class="text-lg font-bold">m</span>
+            </a>
+            <a
+              :href="restaurantData.socialMedia.lieferando"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-10 h-10 bg-slate-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500"
+              aria-label="Lieferando"
+            >
+              <span class="text-lg font-bold">L</span>
+            </a>
+            <a
+              :href="restaurantData.socialMedia.wolt"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-10 h-10 bg-slate-800 hover:bg-primary-600 rounded-lg flex items-center justify-center transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary-500"
+              aria-label="Wolt"
+            >
+              <span class="text-lg font-bold">W</span>
             </a>
           </div>
         </div>
@@ -138,7 +164,7 @@
         <div class="text-center text-slate-400 text-sm">
           <p>
             &copy; {{ currentYear }} Isola Verda. Alle Rechte vorbehalten. | Made with 
-            <span class="text-primary-400">❤️</span> in München
+            <span class="text-primary-400">❤️</span> in Vienna by Ashour Merza
           </p>
         </div>
       </div>
@@ -149,6 +175,7 @@
 <script setup>
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+import restaurantData from '@/data/restaurant.json';
 
 const currentYear = ref(new Date().getFullYear());
 </script>

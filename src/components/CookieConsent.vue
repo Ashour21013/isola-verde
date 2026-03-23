@@ -49,7 +49,7 @@
 import { ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
 
-const cookiesAccepted = ref(false);
+const cookiesAccepted = ref(true); // Standardmäßig versteckt
 
 const acceptCookies = () => {
   localStorage.setItem('cookies-accepted', 'true');
@@ -64,9 +64,12 @@ const rejectCookies = () => {
 };
 
 onMounted(() => {
+  // Prüfe ob der Benutzer bereits eine Cookie-Entscheidung getroffen hat
   const accepted = localStorage.getItem('cookies-accepted');
-  if (accepted !== null) {
-    cookiesAccepted.value = true;
+  
+  // Wenn noch keine Entscheidung getroffen wurde, zeige das Banner
+  if (accepted === null) {
+    cookiesAccepted.value = false;
   }
 });
 </script>

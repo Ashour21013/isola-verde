@@ -10,7 +10,7 @@
           <div class="space-y-6">
             <h2 class="text-3xl sm:text-4xl font-bold">Willkommen bei Isola Verda</h2>
             <p class="text-lg text-slate-600 dark:text-slate-300">
-              Seit 2010 servieren wir authentische italienische Küche im Herzen Münchens. Unsere Leidenschaft für
+              Seit 2010 servieren wir authentische italienische Küche in Wien. Unsere Leidenschaft für
               traditionelle Rezepte und frische Zutaten spiegelt sich in jedem Gericht wider.
             </p>
             <p class="text-lg text-slate-600 dark:text-slate-300">
@@ -117,6 +117,9 @@
       </div>
     </section>
 
+    <!-- Reviews Section -->
+    <ReviewsSection />
+
     <!-- CTA Section -->
     <section class="section-padding bg-gradient-to-r from-primary-600 to-primary-700 text-white">
       <div class="container-custom text-center space-y-8">
@@ -133,10 +136,10 @@
             Speisekarte ansehen
           </RouterLink>
           <a
-            href="tel:+498912345678"
+            :href="`tel:${restaurantData.phone}`"
             class="px-8 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white/10 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-primary-600"
           >
-            +49 (0)89 123 456 78
+            {{ restaurantData.phone }}
           </a>
         </div>
       </div>
@@ -148,6 +151,8 @@
 import { RouterLink } from 'vue-router';
 import HeroSection from '@/components/HeroSection.vue';
 import OpeningHours from '@/components/OpeningHours.vue';
+import ReviewsSection from '@/components/ReviewsSection.vue';
+import restaurantData from '@/data/restaurant.json';
 </script>
 
 <style scoped>

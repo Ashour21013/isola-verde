@@ -7,7 +7,7 @@ const routes = [
     component: () => import('../pages/Home.vue'),
     meta: {
       title: 'Isola Verda - Italienisches Restaurant',
-      description: 'Willkommen bei Isola Verda. Authentische italienische Küche im Herzen der Stadt.',
+      description: 'Willkommen bei Isola Verda. Authentische italienische Küche in Wien.',
     },
   },
   {

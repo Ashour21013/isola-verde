@@ -22,13 +22,10 @@
             <div>
               <h3 class="text-2xl font-semibold mb-4 text-slate-900 dark:text-white">Angaben gemäß § 5 TMG</h3>
               <div class="space-y-2 text-slate-600 dark:text-slate-300">
-                <p><strong>Name:</strong> Isola Verda</p>
+                <p><strong>Name:</strong> {{ restaurantData.name }}</p>
                 <p><strong>Anschrift:</strong><br/>
-                Hauptstraße 42<br/>
-                80331 München<br/>
-                Deutschland</p>
-                <p><strong>Telefon:</strong> <a href="tel:+498912345678" class="text-primary-600 hover:underline">+49 (0)89 123 456 78</a></p>
-                <p><strong>E-Mail:</strong> <a href="mailto:info@isolaverda.de" class="text-primary-600 hover:underline">info@isolaverda.de</a></p>
+                {{ restaurantData.address }}</p>
+                <p><strong>Telefon:</strong> <a :href="`tel:${restaurantData.phone}`" class="text-primary-600 hover:underline">{{ restaurantData.phone }}</a></p>
               </div>
             </div>
 
@@ -158,5 +155,5 @@
 </template>
 
 <script setup>
-// No script needed
+import restaurantData from '@/data/restaurant.json';
 </script>

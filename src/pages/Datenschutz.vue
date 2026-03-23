@@ -24,10 +24,9 @@
         <section>
           <h2 class="text-3xl font-bold mb-4">1. Verantwortlicher</h2>
           <div class="space-y-2 text-slate-600 dark:text-slate-300">
-            <p><strong>Isola Verda</strong></p>
-            <p>Hauptstraße 42<br/>80331 München<br/>Deutschland</p>
-            <p>Email: <a href="mailto:info@isolaverda.de" class="text-primary-600 hover:underline">info@isolaverda.de</a><br/>
-            Telefon: <a href="tel:+498912345678" class="text-primary-600 hover:underline">+49 (0)89 123 456 78</a></p>
+            <p><strong>{{ restaurantData.name }}</strong></p>
+            <p>{{ restaurantData.address }}</p>
+            <p>Telefon: <a :href="`tel:${restaurantData.phone}`" class="text-primary-600 hover:underline">{{ restaurantData.phone }}</a></p>
           </div>
         </section>
 
@@ -189,4 +188,5 @@
 
 <script setup>
 import { RouterLink } from 'vue-router';
+import restaurantData from '@/data/restaurant.json';
 </script>
