@@ -28,25 +28,30 @@
       <!-- Lightbox Modal -->
       <Teleport to="body">
         <transition name="fade">
-          <div v-if="showLightbox" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
-            <div class="relative max-w-4xl w-full">
-              <!-- Close Button -->
-              <button
-                @click="closeLightbox"
-                class="absolute -top-12 right-0 text-white hover:text-slate-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg p-2"
-                aria-label="Schließen"
-              >
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+          <div v-if="showLightbox" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4" @click="closeLightbox">
+            <div class="relative w-full max-w-5xl mx-auto" @click.stop>
+              <!-- Header with Close Button -->
+              <div class="flex justify-between items-center mb-4">
+                <span class="text-white text-sm font-medium">
+                  {{ currentImageIndex + 1 }} / {{ galleryImages.length }}
+                </span>
+                <button
+                  @click="closeLightbox"
+                  class="bg-red-600 hover:bg-red-700 text-white transition-colors focus:outline-none focus:ring-2 focus:ring-red-500 rounded-lg p-2"
+                  aria-label="Schließen"
+                >
+                  <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
 
-              <!-- Image -->
-              <div class="bg-white dark:bg-slate-800 rounded-lg overflow-hidden">
+              <!-- Image Container -->
+              <div class="bg-white dark:bg-slate-800 rounded-lg overflow-hidden shadow-2xl max-h-[70vh] flex items-center justify-center">
                 <img
                   :src="galleryImages[currentImageIndex].src"
                   :alt="galleryImages[currentImageIndex].alt"
-                  class="w-full h-auto"
+                  class="w-full h-full object-contain"
                 />
               </div>
 
@@ -54,7 +59,7 @@
               <div class="flex justify-between items-center mt-6">
                 <button
                   @click="previousImage"
-                  class="text-white hover:text-slate-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg p-2"
+                  class="text-white hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg p-3 bg-slate-700/50 hover:bg-slate-700"
                   aria-label="Vorheriges Bild"
                 >
                   <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -62,13 +67,9 @@
                   </svg>
                 </button>
 
-                <span class="text-white">
-                  {{ currentImageIndex + 1 }} / {{ galleryImages.length }}
-                </span>
-
                 <button
                   @click="nextImage"
-                  class="text-white hover:text-slate-300 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg p-2"
+                  class="text-white hover:text-primary-400 transition-colors focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg p-3 bg-slate-700/50 hover:bg-slate-700"
                   aria-label="Nächstes Bild"
                 >
                   <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
