@@ -6,8 +6,8 @@ const routes = [
     name: 'Home',
     component: () => import('../pages/Home.vue'),
     meta: {
-      title: 'Isola Verda - Italienisches Restaurant',
-      description: 'Willkommen bei Isola Verda. Authentische italienische Küche in Wien.',
+      title: 'Isola Verde - Italienisches Restaurant',
+      description: 'Willkommen bei Isola Verde. Authentische italienische Küche in Wien.',
     },
   },
   {
@@ -15,7 +15,7 @@ const routes = [
     name: 'Speisekarte',
     component: () => import('../pages/Speisekarte.vue'),
     meta: {
-      title: 'Speisekarte - Isola Verda',
+      title: 'Speisekarte - Isola Verde',
       description: 'Entdecken Sie unsere köstliche Speisekarte mit traditionellen italienischen Gerichten.',
     },
   },
@@ -24,7 +24,7 @@ const routes = [
     name: 'Kontakt',
     component: () => import('../pages/Kontakt.vue'),
     meta: {
-      title: 'Kontakt & Anfahrt - Isola Verda',
+      title: 'Kontakt & Anfahrt - Isola Verde',
       description: 'Kontaktieren Sie uns oder besuchen Sie uns. Öffnungszeiten, Adresse und Kontaktformular.',
     },
   },
@@ -33,7 +33,7 @@ const routes = [
     name: 'Galerie',
     component: () => import('../pages/Galerie.vue'),
     meta: {
-      title: 'Galerie - Isola Verda',
+      title: 'Galerie - Isola Verde',
       description: 'Schauen Sie sich unsere schöne Galerie an. Bilder unseres Restaurants und unserer Gerichte.',
     },
   },
@@ -42,7 +42,7 @@ const routes = [
     name: 'Datenschutz',
     component: () => import('../pages/Datenschutz.vue'),
     meta: {
-      title: 'Datenschutzerklärung - Isola Verda',
+      title: 'Datenschutzerklärung - Isola Verde',
       description: 'Lesen Sie unsere Datenschutzerklärung und erfahren Sie, wie wir Ihre Daten schützen.',
     },
   },
@@ -51,8 +51,8 @@ const routes = [
     name: 'Impressum',
     component: () => import('../pages/Impressum.vue'),
     meta: {
-      title: 'Impressum & AGB - Isola Verda',
-      description: 'Rechtliche Informationen zu Isola Verda, Impressum und Allgemeine Geschäftsbedingungen.',
+      title: 'Impressum & AGB - Isola Verde',
+      description: 'Rechtliche Informationen zu Isola Verde, Impressum und Allgemeine Geschäftsbedingungen.',
     },
   },
   {
@@ -79,22 +79,22 @@ const router = createRouter({
 
 // Update meta tags on route change
 router.afterEach((to) => {
-  document.title = to.meta.title || 'Isola Verda';
+  document.title = to.meta.title || 'Isola Verde';
   
   const metaDescription = document.querySelector('meta[name="description"]');
   if (metaDescription) {
-    metaDescription.setAttribute('content', to.meta.description || 'Isola Verda - Italienisches Restaurant');
+    metaDescription.setAttribute('content', to.meta.description || 'Isola Verde - Italienisches Restaurant');
   }
 
   // Update Open Graph tags
   const ogTitle = document.querySelector('meta[property="og:title"]');
   if (ogTitle) {
-    ogTitle.setAttribute('content', to.meta.title || 'Isola Verda');
+    ogTitle.setAttribute('content', to.meta.title || 'Isola Verde');
   }
 
   const ogDescription = document.querySelector('meta[property="og:description"]');
   if (ogDescription) {
-    ogDescription.setAttribute('content', to.meta.description || 'Isola Verda - Italienisches Restaurant');
+    ogDescription.setAttribute('content', to.meta.description || 'Isola Verde - Italienisches Restaurant');
   }
 });
 

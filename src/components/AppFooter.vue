@@ -8,7 +8,7 @@
             <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
               <span class="text-white font-bold text-sm">IV</span>
             </div>
-            <h3 class="text-lg font-bold">Isola Verda</h3>
+            <h3 class="text-lg font-bold">Isola Verde</h3>
           </div>
           <p class="text-slate-300 text-sm leading-relaxed">
             Authentische italienische Küche in Wien. Wir servieren traditionelle Rezepte mit modernem Flair.
@@ -163,7 +163,7 @@
         <!-- Copyright -->
         <div class="text-center text-slate-400 text-sm">
           <p>
-            &copy; {{ currentYear }} Isola Verda. Alle Rechte vorbehalten. | Made with 
+            &copy; {{ currentYear }} Isola Verde. Alle Rechte vorbehalten. | Made with 
             <span class="text-primary-400">❤️</span> in Vienna by Ashour Merza
           </p>
         </div>

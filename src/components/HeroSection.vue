@@ -18,7 +18,7 @@
     <div class="relative z-10 container-custom text-center text-white space-y-6 py-12 sm:py-20">
       <!-- Badge with Animation -->
       <span class="inline-block px-4 py-2 bg-gradient-to-r from-primary-600/30 to-red-600/30 border border-primary-400/40 rounded-full text-sm font-medium text-primary-200 backdrop-blur-sm animate-fade-in shadow-lg hover:shadow-primary-600/50 transition-all duration-300">
-        🇮🇹 Willkommen bei Isola Verda
+        🇮🇹 Willkommen bei Isola Verde
       </span>
 
       <!-- Animated Headline with Gradient -->

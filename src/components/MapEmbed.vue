@@ -1,7 +1,7 @@
 <template>
   <div class="w-full h-96 rounded-lg overflow-hidden shadow-lg">
     <iframe
-      title="Google Maps - Isola Verda Restaurant Wien"
+      title="Google Maps - Isola Verde Restaurant Wien"
       width="100%"
       height="100%"
       style="border: 0"

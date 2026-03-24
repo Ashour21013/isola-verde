@@ -3,22 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Isola Verda - Italienisches Restaurant mit authentischer Küche in Wien." />
-    <meta name="keywords" content="Restaurant, Italienisch, München, Pasta, Pizza, Essen" />
-    <meta name="author" content="Isola Verda" />
+    <meta name="description" content="Isola Verde - Italienisches Restaurant mit authentischer Küche in Wien." />
+    <meta name="keywords" content="Restaurant, Italienisch, Wien, Pasta, Pizza, Essen" />
+    <meta name="author" content="Isola Verde" />
     
     <!-- Open Graph Meta Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Isola Verda - Italienisches Restaurant" />
+    <meta property="og:title" content="Isola Verde - Italienisches Restaurant" />
     <meta property="og:description" content="Authentische italienische Küche in Wien." />
     <meta property="og:image" content="https://images.unsplash.com/photo-1552566626-e71e99fe4c02?w=1200&h=630&fit=crop" />
-    <meta property="og:url" content="https://isolaverda.de" />
-    <meta property="og:site_name" content="Isola Verda" />
+    <meta property="og:url" content="https://isolaverde.at" />
+    <meta property="og:site_name" content="Isola Verde" />
     <meta property="og:locale" content="de_DE" />
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Isola Verda - Italienisches Restaurant" />
+    <meta name="twitter:title" content="Isola Verde - Italienisches Restaurant" />
     <meta name="twitter:description" content="Authentische italienische Küche in Wien." />
     <meta name="twitter:image" content="https://images.unsplash.com/photo-1552566626-e71e99fe4c02?w=1200&h=630&fit=crop" />
 
@@ -35,18 +35,18 @@
       {
         "@context": "https://schema.org",
         "@type": "Restaurant",
-        "name": "Isola Verda",
+        "name": "Isola Verde",
         "image": "https://images.unsplash.com/photo-1552566626-e71e99fe4c02?w=1200",
         "description": "Authentische italienische Küche in Wien",
-        "url": "https://isolaverda.de",
-        "telephone": "+49 (0)89 123 456 78",
-        "email": "info@isolaverda.de",
+        "url": "https://isolaverde.at",
+        "telephone": "+43 1 3688255",
+        "email": "info@isolaverde.at",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Hauptstraße 42",
-          "addressLocality": "München",
-          "postalCode": "80331",
-          "addressCountry": "DE"
+          "streetAddress": "Silbergasse 24",
+          "addressLocality": "Wien",
+          "postalCode": "1190",
+          "addressCountry": "AT"
         },
         "geo": {
           "@type": "GeoCoordinates",
@@ -103,10 +103,20 @@
       }
     </script>
 
-    <title>Isola Verda - Italienisches Restaurant München</title>
+    <title>Isola Verde - Italienisches Restaurant Wien</title>
   </head>
   <body>
     <div id="app"></div>
     <script type="module" src="/src/main.js"></script>
+    <script>
+      // Handle 404 redirect für Vue Router
+      (function() {
+        let redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.pathname) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
   </body>
 </html>

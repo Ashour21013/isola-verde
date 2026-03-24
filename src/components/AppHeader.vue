@@ -8,12 +8,12 @@
       <RouterLink
         to="/"
         class="flex items-center gap-2 focus:outline-none focus:ring-2 focus:ring-primary-500 rounded-lg px-2 py-1"
-        aria-label="Isola Verda - Startseite"
+        aria-label="Isola Verde - Startseite"
       >
         <div class="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
           <span class="text-white font-bold text-sm">IV</span>
         </div>
-        <span class="hidden sm:inline font-bold text-lg text-slate-900 dark:text-white">Isola Verda</span>
+        <span class="hidden sm:inline font-bold text-lg text-slate-900 dark:text-white">Isola Verde</span>
       </RouterLink>
 
       <!-- Desktop Navigation -->

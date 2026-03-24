@@ -8,7 +8,7 @@
       <div class="container-custom">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div class="space-y-6">
-            <h2 class="text-3xl sm:text-4xl font-bold">Willkommen bei Isola Verda</h2>
+            <h2 class="text-3xl sm:text-4xl font-bold">Willkommen bei Isola Verde</h2>
             <p class="text-lg text-slate-600 dark:text-slate-300">
               Seit 2010 servieren wir authentische italienische Küche in Wien. Unsere Leidenschaft für
               traditionelle Rezepte und frische Zutaten spiegelt sich in jedem Gericht wider.
@@ -60,7 +60,7 @@
     <!-- Features Section -->
     <section class="section-padding bg-white dark:bg-slate-900">
       <div class="container-custom">
-        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Warum Isola Verda?</h2>
+        <h2 class="text-3xl sm:text-4xl font-bold text-center mb-12">Warum Isola Verde?</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div class="card p-8 text-center hover:shadow-xl transition-all duration-300 group">
