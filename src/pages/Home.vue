@@ -20,7 +20,7 @@
 
             <div class="flex flex-wrap gap-4 pt-4">
               <RouterLink to="/speisekarte" class="btn-primary"> Speisekarte entdecken </RouterLink>
-              <a href="tel:+498912345678" class="btn-secondary"> Reservieren </a>
+              <a :href="`tel:${restaurantData.phone}`" class="btn-secondary"> Reservieren </a>
             </div>
           </div>
 

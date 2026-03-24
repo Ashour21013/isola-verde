@@ -148,7 +148,7 @@
             <div class="bg-slate-50 dark:bg-slate-800 p-4 rounded-lg space-y-2">
               <p><strong>Email:</strong> <a href="mailto:datenschutz@isolaverda.de" class="text-primary-600 hover:underline">datenschutz@isolaverda.de</a></p>
               <p><strong>Adresse:</strong> Isola Verda, Hauptstraße 42, 80331 München</p>
-              <p><strong>Telefon:</strong> <a href="tel:+498912345678" class="text-primary-600 hover:underline">+49 (0)89 123 456 78</a></p>
+              <p><strong>Telefon:</strong> <a :href="`tel:${restaurantData.phone}`" class="text-primary-600 hover:underline">{{ restaurantData.phone }}</a></p>
             </div>
           </div>
         </section>
